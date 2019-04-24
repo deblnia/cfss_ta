@@ -2,8 +2,9 @@
 title: "HW04"
 author: "Deblina Mukherjee"
 date: "April 23, 2019"
-output: slidy_presentation
-
+output:
+  beamer_presentation: default
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -65,7 +66,8 @@ map_int(mtcars, function(x) length(unique(x)))
 ```{r, eval=FALSE}
 
 if(!is.numeric(x)){
-    stop("At least one argument is not numeric. Only provide numbers.")
+    stop("At least one argument is not numeric. 
+         Only provide numbers.")
 }
 
 
