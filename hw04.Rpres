@@ -15,10 +15,10 @@ What a for loop looks like practically
 ========================================================
 
 ```{r, results = "hide"}
-output <- vector("double", ncol(iris))
+output <- vector("numeric", ncol(mtcars))
 
-for(i in seq_along(iris)){
-  output[[i]] <- length(unique(iris[[i]]))
+for(i in seq_along(mtcars)){
+  output[[i]] <- length(unique(mtcars[[i]]))
 }
 
 output
@@ -34,8 +34,11 @@ Subsetting Lists
 Anonymous Functions 
 ========================================================
 
-```{r}
-map_int(iris, function(x) length(unique(x)))
+```{r, results="hide"}
+library(tidyverse)
+
+map_int(mtcars, function(x) length(unique(x)))
+
 ```
 
 Pythagorean Problem 
@@ -56,11 +59,12 @@ Pythagorean Problem (cont.)
     
 An example of the stop function
 ========================================================
-```{r, results=hide}
-x <- c("This is not numeric")
 
-if(!is.numeric(x)){
+```{r, eval=FALSE}
+
+if(!is.numeric(mtcars)){
     stop("At least one argument is not numeric. Only provide numbers.")
-  }
+}
+
 ```
 
