@@ -1,21 +1,25 @@
-HW 4 Tips 
-========================================================
-author: Deblina Mukherjee
-date: April 2019
-autosize: true
+---
+title: "HW04"
+author: "Deblina Mukherjee"
+date: "April 23, 2019"
+output: slidy_presentation
 
-What for loops look like conceptually 
-========================================================
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# What a ```for``` loops look like conceptually 
+
 1. Pre-allocating space specifying data type of vector and it's length
 2. Call for loop and specify element in list to iterate on 
 3. Specify function and output
 4. Create output 
 
-What a for loop looks like practically
-========================================================
+# What a ```for``` loop looks like practically
 
-
-```r
+```{r, results = "hide"}
 output <- vector("numeric", ncol(mtcars))
 
 for(i in seq_along(mtcars)){
@@ -23,47 +27,47 @@ for(i in seq_along(mtcars)){
 }
 
 output
+
 ```
 
 
-Subsetting Lists 
-========================================================
+# Subsetting Lists 
 
 ![](subsetting.png)
 
-Anonymous Functions 
-========================================================
+# Anonymous Functions 
 
-
-```r
-library(tidyverse)
+```{r, eval=FALSE}
 
 map_int(mtcars, function(x) length(unique(x)))
+
 ```
 
-Pythagorean Problem 
-========================================================
+# Pythagorean Problem 
+
 * Conceptual Roadmap: 
   - Inputs: too many? too few? all numeric? 
   - Sort the inputs: what sides of the triangle do we have? 
   - Perform the operation (depending on what sides you have)
   
-Pythagorean Problem (cont.)
-========================================================
+# Pythagorean Problem (cont.)
+
 * Functions you may find helpful: 
   - ```sort()``` 
   - ```if()```
   - ```length()```
+  - ```unique()```
   - ```stop()```
   - ```else if()```
     
-An example of the stop function
-========================================================
+# An example of the ```stop()``` function
 
+```{r, eval=FALSE}
 
-```r
-if(!is.numeric(mtcars)){
+if(!is.numeric(x)){
     stop("At least one argument is not numeric. Only provide numbers.")
 }
+
+
 ```
 
