@@ -36,6 +36,12 @@ output
 
 ![](subsetting.png)
 
+# Subsetting Lists (cont.)
+
+* [[]] extracts a single element by name or position 
+* [] extracts multiple elements by name or position 
+* row,column
+
 # Anonymous Functions 
 
 ```{r, eval=FALSE}
