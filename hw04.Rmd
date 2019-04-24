@@ -50,6 +50,19 @@ map_int(mtcars, function(x) length(unique(x)))
 
 ```
 
+# World Bank: Importing the Data
+
+* Conceptual Roadmap: 
+  - Make a function that: 
+      - Read in the files
+      - Drop fake columns 
+      - Rename columns 
+      - Reshaping (keep it tidy)
+      - Rename columns 
+  - Make a list of all the data
+  - Read the data in 
+      
+
 # Pythagorean Problem 
 
 * Conceptual Roadmap: 
